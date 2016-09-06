@@ -1,0 +1,26 @@
+{
+  "name": "node-standup",
+  "version": "0.0.1",
+  "description": "Node app for daily standup status",
+  "main": "index.js",
+  "scripts": {
+    "dev": "./node_modules/.bin/nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/craigatk/node-standup.git"
+  },
+  "author": "Craig Atkinson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/craigatk/node-standup/issues"
+  },
+  "homepage": "https://github.com/craigatk/node-standup",
+  "dependencies": {
+    "express": "4.14.0"
+  },
+  "devDependencies": {
+    "nodemon": "1.10.2"
+  }
+}
