@@ -6,6 +6,6 @@ app.listen(3000, function() {
   console.log('listening on 3000');
 });
 
-app.get('/', function(req, res) {
-  res.send('Hello World');
+app.get('/api/', function(req, res) {
+  res.send({"msg": "Hello world"});
 });
