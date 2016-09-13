@@ -20,14 +20,21 @@
       <a href="https://github.com/vuejs/vuex/" target="_blank">vuex</a> for state management.
     </p>
   </div>
+
+  <div>
+    <submit></submit>
+  </div>
+
 </template>
 
 <script>
 import Hello from './components/Hello'
+import Submit from './components/Submit'
 
 export default {
   components: {
-    Hello
+    Hello,
+    Submit
   }
 }
 </script>
