@@ -17,8 +17,16 @@ app.get('/api/', function(req, res) {
   res.send({"msg": "Hello world"});
 });
 
-app.post('/api/status', function(req, res) {
-  console.log('req', req.body);
+var statusList = [];
 
-  res.send(req.body);
+app.post('/api/status', function(req, res) {
+  var newStatus = req.body;
+
+  statusList.push(newStatus);
+
+  res.send(newStatus);
+});
+
+app.get('/api/status/all', function(req, res) {
+  res.send(JSON.stringify(statusList));
 });

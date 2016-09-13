@@ -26,7 +26,7 @@
 
 </style>
 <script>
-  const request = require('superagent')
+  import store from '../store'
 
   export default {
 
@@ -42,12 +42,7 @@
       onSubmit: function (event) {
         let status = { name: this.name, yesterday: this.yesterday, today: this.today, impediments: this.impediments }
 
-        request
-          .post('/api/status')
-          .send(status)
-          .then((res) => {
-            console.log('res', res.body)
-          })
+        store.newStatus(status)
       }
     }
 
