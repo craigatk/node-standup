@@ -19,4 +19,6 @@ app.get('/api/', function(req, res) {
 
 app.post('/api/status', function(req, res) {
   console.log('req', req.body);
+
+  res.send(req.body);
 });

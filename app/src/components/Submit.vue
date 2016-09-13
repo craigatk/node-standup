@@ -46,7 +46,7 @@
           .post('/api/status')
           .send(status)
           .then((res) => {
-
+            console.log('res', res.body)
           })
       }
     }
