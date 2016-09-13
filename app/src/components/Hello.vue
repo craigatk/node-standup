@@ -5,15 +5,20 @@
 </template>
 
 <script>
+const request = require('superagent')
+
 export default {
+
   data () {
     return {
-      // note: changing this line won't causes changes
-      // with hot-reload because the reloaded component
-      // preserves its current state and we are modifying
-      // its initial state.
-      msg: 'Hello World!'
+      msg: null
     }
+  },
+  created () {
+    request.get('/api/')
+    .then(res => {
+      this.msg = res.body.msg
+    })
   }
 }
 </script>
