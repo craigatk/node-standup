@@ -1,6 +1,7 @@
-import { EventEmitter } from 'events'
+/*global fetch*/
 
-const request = require('superagent')
+import { EventEmitter } from 'events'
+import 'whatwg-fetch'
 
 const store = new EventEmitter()
 
@@ -17,23 +18,28 @@ let addStatus = (newStatus) => {
 }
 
 store.newStatus = (status) => {
-  return request
-    .post('/api/status')
-    .send(status)
-    .then(function (res) {
-      let newStatus = res.body
+  fetch('/api/status', {
+    method: 'POST',
+    body: JSON.stringify(status),
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    }
+  }).then(function (res) {
+    return res.json()
+  }).then(function (json) {
+    let newStatus = json
 
-      addStatus(newStatus)
-    })
+    addStatus(newStatus)
+  })
 }
 
 store.loadAll = () => {
-  return request.get('/api/status/all')
-    .then(res => {
-      statusList = res.body
-
-      return statusList
+  return fetch('/api/status/all').then(function (res) {
+    res.json().then((json) => {
+      statusList = json
     })
+  })
 }
 
 store.getStatusList = () => {

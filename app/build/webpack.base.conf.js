@@ -9,7 +9,7 @@ var folders = {
 
 module.exports = {
   entry: {
-    app: './src/main.js'
+    app: ['babel-polyfill', 'whatwg-fetch', './src/main.js']
   },
   output: {
     path: config.build.assetsRoot,
