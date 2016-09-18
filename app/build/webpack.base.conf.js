@@ -1,3 +1,4 @@
+var webpack = require('webpack')
 var path = require('path')
 var config = require('../config')
 var utils = require('./utils')
@@ -9,7 +10,7 @@ var folders = {
 
 module.exports = {
   entry: {
-    app: ['babel-polyfill', 'whatwg-fetch', './src/main.js']
+    app: ['babel-polyfill', 'whatwg-fetch', 'bootstrap-loader', './src/main.js']
   },
   output: {
     path: config.build.assetsRoot,
@@ -82,6 +83,12 @@ module.exports = {
       }
     ]
   },
+  plugins: [
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery'
+    })
+  ],
   eslint: {
     formatter: require('eslint-friendly-formatter')
   },
