@@ -1,9 +1,17 @@
 <template>
   <div id="app" class="container">
-    <h1>Your Status</h1>
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <h1>Your Status</h1>
+      </div>
+    </div>
     <submit></submit>
 
-    <h1>Team Status</h1>
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <h1>Team Status</h1>
+      </div>
+    </div>
     <list></list>
   </div>
 </template>
@@ -27,26 +35,6 @@ html {
 
 body {
   display: flex;
-  align-items: center;
-  justify-content: center;
   height: 100%;
-}
-
-#app {
-  color: #2c3e50;
-  margin-top: -100px;
-  max-width: 600px;
-  font-family: Source Sans Pro, Helvetica, sans-serif;
-  text-align: center;
-}
-
-#app a {
-  color: #42b983;
-  text-decoration: none;
-}
-
-.logo {
-  width: 100px;
-  height: 100px
 }
 </style>

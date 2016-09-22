@@ -1,6 +1,6 @@
 <template>
     <div class="row">
-      <div class="col-md-9 col-md-offset-3">
+      <div class="col-md-6 col-md-offset-3">
         <form v-on:submit.prevent="onSubmit">
           <div class="form-group">
             <label for="yourName">Your name</label>
@@ -19,7 +19,7 @@
             <input class="form-control" type="text" v-model="impediments" id="impediments"/>
           </div>
 
-          <button class="btn btn-default" type="submit" id="submit">Submit</button>
+          <button class="btn btn-success" type="submit" id="submit">Submit</button>
       </form>
       </div>
     </div>

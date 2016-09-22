@@ -36,8 +36,10 @@ store.newStatus = (status) => {
 
 store.loadAll = () => {
   return fetch('/api/status/all').then(function (res) {
-    res.json().then((json) => {
+    return res.json().then((json) => {
       statusList = json
+
+      return statusList
     })
   })
 }

@@ -1,10 +1,17 @@
 <template>
-    <div>
-      <ul>
-        <li v-for="status in statusList">
-          {{status.name}}: {{status.today}}
-        </li>
-      </ul>
+    <div class="row">
+      <div class="col-md-9 col-md-offset-3">
+        <dl class="dl-horizontal" v-for="status in statusList">
+          <dt>Name</dt>
+          <dd>{{status.name}}</dd>
+          <dt>Completed yesterday</dt>
+          <dd>{{status.yesterday}}</dd>
+          <dt>Working on today</dt>
+          <dd>{{status.today}}</dd>
+          <dt>Impediments</dt>
+          <dd>{{status.impediments}}</dd>
+        </dl>
+      </div>
     </div>
 </template>
 <style>
