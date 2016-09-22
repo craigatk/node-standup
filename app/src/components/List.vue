@@ -1,24 +1,24 @@
 <template>
     <div class="row">
-      <div class="col-md-9 col-md-offset-3">
-        <dl class="dl-horizontal" v-for="status in statusList">
-          <dt class="name">{{status.name}}</dt>
-          <dd></dd>
-          <dt>Completed yesterday</dt>
-          <dd>{{status.yesterday}}</dd>
-          <dt>Working on today</dt>
-          <dd>{{status.today}}</dd>
-          <dt>Impediments</dt>
-          <dd>{{status.impediments}}</dd>
-        </dl>
+      <div class="col-md-9">
+        <div class="panel panel-default" v-for="status in statusList">
+          <div class="panel-heading">{{status.name}}</div>
+          <div class="panel-body">
+            <dl class="dl-horizontal">
+              <dt>Completed yesterday</dt>
+              <dd>{{status.yesterday}}</dd>
+              <dt>Working on today</dt>
+              <dd>{{status.today}}</dd>
+              <dt>Impediments</dt>
+              <dd>{{status.impediments}}</dd>
+            </dl>
+          </div>
+        </div>
       </div>
     </div>
 </template>
 <style scoped>
-.name {
-  font-size: 1.2em;
-  margin-bottom: 10px;
-}
+
 </style>
 <script>
   import store from '../store'

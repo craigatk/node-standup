@@ -1,6 +1,6 @@
 <template>
     <div class="row">
-      <div class="col-md-6 col-md-offset-3">
+      <div class="col-md-6">
         <form v-on:submit.prevent="onSubmit">
           <div class="form-group">
             <label for="yourName">Your name</label>
