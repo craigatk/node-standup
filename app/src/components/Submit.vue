@@ -1,25 +1,27 @@
 <template>
-    <div>
-      <form v-on:submit.prevent="onSubmit">
-        <div>
-          <label>Your name</label>
-          <input type="text" v-model="yourName" id="yourName"/>
-        </div>
-        <div>
-          <label>Completed yesterday</label>
-          <input type="text" v-model="yesterday" id="yesterday"/>
-        </div>
-        <div>
-          <label>Working on today</label>
-          <input type="text" v-model="today" id="today"/>
-        </div>
-        <div>
-          <label>Impediments</label>
-          <input type="text" v-model="impediments" id="impediments"/>
-        </div>
-        <div>
-          <button type="submit" id="submit">Submit</button>
+    <div class="row">
+      <div class="col-md-9 col-md-offset-3">
+        <form v-on:submit.prevent="onSubmit">
+          <div class="form-group">
+            <label for="yourName">Your name</label>
+            <input class="form-control" type="text" v-model="yourName" id="yourName"/>
+          </div>
+          <div class="form-group">
+            <label for="yesterday">Completed yesterday</label>
+            <input class="form-control" type="text" v-model="yesterday" id="yesterday"/>
+          </div>
+          <div class="form-group">
+            <label>Working on today</label>
+            <input class="form-control" type="text" v-model="today" id="today"/>
+          </div>
+          <div class="form-group">
+            <label>Impediments</label>
+            <input class="form-control" type="text" v-model="impediments" id="impediments"/>
+          </div>
+
+          <button class="btn btn-default" type="submit" id="submit">Submit</button>
       </form>
+      </div>
     </div>
 </template>
 <style>

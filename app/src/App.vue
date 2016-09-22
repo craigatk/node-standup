@@ -1,14 +1,10 @@
 <template>
-  <div id="app">
-    <div>
-      <h1>Your Status</h1>
-      <submit></submit>
-    </div>
+  <div id="app" class="container">
+    <h1>Your Status</h1>
+    <submit></submit>
 
-    <div>
-      <h1>Team Status</h1>
-      <list></list>
-    </div>
+    <h1>Team Status</h1>
+    <list></list>
   </div>
 </template>
 
