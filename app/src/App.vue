@@ -1,5 +1,26 @@
 <template>
-  <div id="app" class="container">
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Status</a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Team <span class="sr-only">(current)</span></a></li>
+          <li><a href="#">Submit Your Status</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
         <h1>Your Status</h1>
@@ -29,12 +50,5 @@ export default {
 </script>
 
 <style>
-html {
-  height: 100%;
-}
 
-body {
-  display: flex;
-  height: 100%;
-}
 </style>

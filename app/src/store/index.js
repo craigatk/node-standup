@@ -25,9 +25,9 @@ store.newStatus = (status) => {
       'Accept': 'application/json',
       'Content-Type': 'application/json'
     }
-  }).then(function (res) {
+  }).then((res) => {
     return res.json()
-  }).then(function (json) {
+  }).then((json) => {
     let newStatus = json
 
     addStatus(newStatus)
@@ -35,7 +35,7 @@ store.newStatus = (status) => {
 }
 
 store.loadAll = () => {
-  return fetch('/api/status/all').then(function (res) {
+  return fetch('/api/status/all').then((res) => {
     return res.json().then((json) => {
       statusList = json
 

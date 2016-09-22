@@ -2,8 +2,8 @@
     <div class="row">
       <div class="col-md-9 col-md-offset-3">
         <dl class="dl-horizontal" v-for="status in statusList">
-          <dt>Name</dt>
-          <dd>{{status.name}}</dd>
+          <dt class="name">{{status.name}}</dt>
+          <dd></dd>
           <dt>Completed yesterday</dt>
           <dd>{{status.yesterday}}</dd>
           <dt>Working on today</dt>
@@ -14,8 +14,11 @@
       </div>
     </div>
 </template>
-<style>
-
+<style scoped>
+.name {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
 </style>
 <script>
   import store from '../store'
