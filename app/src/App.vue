@@ -49,6 +49,10 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+  $icon-font-path: "../node_modules/bootstrap-sass/assets/fonts/bootstrap/";
 
+  @import '../node_modules/bootswatch/paper/_variables.scss';
+  @import '../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss';
+  @import '../node_modules/bootswatch/paper/_bootswatch.scss';
 </style>

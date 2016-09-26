@@ -4,13 +4,9 @@ var config = require('../config')
 var utils = require('./utils')
 var projectRoot = path.resolve(__dirname, '../')
 
-var folders = {
-  NPM: path.resolve(__dirname, '../node_modules')
-};
-
 module.exports = {
   entry: {
-    app: ['babel-polyfill', 'whatwg-fetch', 'bootstrap-loader', './src/main.js']
+    app: ['babel-polyfill', 'whatwg-fetch', './src/main.js']
   },
   output: {
     path: config.build.assetsRoot,
@@ -23,8 +19,7 @@ module.exports = {
     alias: {
       'src': path.resolve(__dirname, '../src'),
       'assets': path.resolve(__dirname, '../src/assets'),
-      'components': path.resolve(__dirname, '../src/components'),
-      'superagent': path.join(folders.NPM, 'superagent', 'lib', 'client.js')
+      'components': path.resolve(__dirname, '../src/components')
     }
   },
   resolveLoader: {

@@ -15,7 +15,8 @@
   "dependencies": {
     "babel-polyfill": "6.13.0",
     "babel-runtime": "6.11.6",
-    "bootstrap-loader": "1.1.6",
+    "bootstrap-sass": "3.3.7",
+    "bootswatch": "^3.3.7",
     "jquery": "3.1.0",
     "vue": "1.0.21",
     "whatwg-fetch": "1.0.0"
@@ -28,7 +29,6 @@
     "babel-preset-es2015": "6.13.0",
     "babel-preset-stage-2": "6.13.0",
     "babel-register": "6.14.0",
-    "bootstrap-sass": "3.3.7",
     "chai": "3.5.0",
     "chromedriver": "2.21.2",
     "connect-history-api-fallback": "1.1.0",
